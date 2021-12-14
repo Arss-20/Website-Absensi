@@ -32,11 +32,11 @@
                 <form action="" class="panel" method="post">
                     <img src="img/logo unj.png" width="90" style="display: block; margin-left: auto; margin-right: auto;" alt="">
                     <h3 class="mb-4 text-center text-uppercase">Login </h3>
-                    <?php if( isset($error) ) :?>
+
                         <div class="alert alert-danger mr-5 ml-5 radius" role="alert">
                         Email / Password salah
                         </div>
-                    <?php endif; ?>
+                    
                     <div class="form-group ml-5 mr-5">
                         <input type="text" name="email" id="email" class="form-control form-control-lg radius" placeholder="Email">
                     </div>
@@ -44,7 +44,11 @@
                         <input type="password" name="password" id="password" class="form-control form-control-lg radius" placeholder="Password">
                     </div>
                     <div class="form-group mt-4 ml-5 mr-5">
-                    <button type="submit" class="btn btn-login block radius" name="login">Login</button>
+                    <button type="submit" class="btn btn-login block radius" name="login">
+                        <a href="index.html" style="text-decoration: none; color: black;">
+                        Login
+                        </a>
+                    </button>
                     </div>
                     <!-- <div class="form-group mt-4 ml-5 mr-5">
                     <a href="registrasidosen.php" class="btn btn-info btn-regis block radius" role="button">Registrasi</a>

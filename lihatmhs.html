@@ -37,7 +37,7 @@
     <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo unj.png" width="40">
         </div>
@@ -125,7 +125,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $dosen_name ;?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
                 <img class="img-profile rounded-circle" src="img/user.jpg">
               </a>
               <!-- Dropdown - User Information -->
@@ -175,28 +175,13 @@
                     </tr>
                   </thead>
                   <tbody align="center">
-                    <?php
-                    $sql="SELECT * FROM mahasiswa";
-                    $query=mysqli_query($koneksi,$sql);
-                    $i = 1;
-                    while ($data=mysqli_fetch_array($query)){
-                        $npm=$data["npm"];
-                        $nama=$data["nama"];
-                        $foto=$data["foto"];
-                        $kelas=$data["id_kelas"];
 
-                    ?>
                     <tr>
-                      <td><?=$i++;?></td>
-                      <td><img class="img-profile rounded-circle" style="width:50px;height:50px;" src="img/<?=$foto?>"></td>
-                      <td><?= $npm;?></td>
-                      <td><?= $nama;?></td>
-                      <td><?php if($kelas=="001"){
-                        echo 'R6A';
-                      }elseif($kelas=="002"){
-                        echo 'R6X';
-                      }
-                      ;?></td>
+                      <td>1</td>
+                      <td><img class="img-profile rounded-circle" style="width:50px;height:50px;" src="img/female.png"></td>
+                      <td>1512629040</td>
+                      <td>Arasya Diipsena</td>
+                      <td></td>
                       
                       <td><a href="#" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
@@ -205,7 +190,7 @@
                     <span class="text">Lihat Detail</span>
                   </a></td>
                     </tr>
-                    <?php }?>
+                    
                     </tbody>
                 </table>
             </div>
@@ -263,7 +248,7 @@
         <div class="modal-body">Pilih Logout untuk keluar.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="logout.php">Logout</a>
+          <a class="btn btn-primary" href="#">Logout</a>
         </div>
       </div>
     </div>

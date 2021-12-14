@@ -53,7 +53,7 @@
     <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo unj.png" width="40">
         </div>
@@ -141,7 +141,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $dosen_name ;?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
                 <img class="img-profile rounded-circle" src="img/user.jpg">
               </a>
               <!-- Dropdown - User Information -->
@@ -184,15 +184,11 @@
                   <div class="card-body">
                   <form role="form" action="detailabsensi.html" method="get" name="postform" enctype="multipart/form-data">
                   <div class="form-group">
-                    <label for="kelas">Kelas</label>
+                    <label for="kelas">Mata Kuliah</label>
                     <select id="kelas" class="form-control" name="kelas">
-                    <?php
-                        $sql_kelas=mysqli_query($koneksi,"select * from kelas where id_dosen='$dosen_id'");
-                        while($data=mysqli_fetch_array($sql_kelas)){
-                          echo "<option value='$data[0]' > $data[1] </option>";
-                        }     
-
-                      ?>   
+                      <option>Rancang Bangun Perangkat Lunak</option>
+                      <option>Sistem Pendukung Keputusan</option>
+                      <option>Metodologi Pengembangan Perangkat Lunak</option>
                     </select>
                   </div>
                   
@@ -236,21 +232,14 @@
                   <div class="form-group">
                     <label for="kelas">Kelas</label>
                     <select id="kelas" class="form-control" name="kelas">
-                    <?php
-                        $sql_kelas=mysqli_query($koneksi,"select * from kelas where id_dosen='$dosen_id'");
-                        while($data=mysqli_fetch_array($sql_kelas)){
-                          echo "<option value='$data[0]' > $data[1] </option>";
 
-                        }     
-
-                      ?>   
                     </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Pilih Kelas</button>
                   </form>
                 </div>
             </div>
-                  </div>
+            </div>
             </div>
          </div>
         </div>
@@ -305,7 +294,7 @@
         <div class="modal-body">Pilih Logout untuk keluar</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="functions/logout.php">Logout</a>
+          <a class="btn btn-primary" href="#">Logout</a>
         </div>
       </div>
     </div>
